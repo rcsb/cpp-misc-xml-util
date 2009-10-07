@@ -11,7 +11,6 @@
 #include "GenCont.h"
 #include "RcsbFile.h"
 #include "CifFile.h"
-#include "CifParserBase.h"
 #include "PdbMlSchema.h"
 #include "DataInfo.h"
 #include "MmcifToXml.h"
