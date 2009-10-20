@@ -68,6 +68,14 @@ int main(int argc, char* argv[])
 
             CifFile* cifFileP = ParseCif(opts.inpFile);
 
+            const string& parsingDiags = cifFileP->GetParsingDiags();
+
+            if (!parsingDiags.empty())
+            {
+                cout << "Diags for file " << cifFileP->GetSrcFileName() <<
+                  "  = " << parsingDiags << endl;
+            }
+
             MmcifToXml mmcifToXml(*cifFileP, dictDataInfo, opts.schemaPrefix,
               opts.verbose);
 
@@ -84,6 +92,14 @@ int main(int argc, char* argv[])
             CifDataInfo cifDataInfo(*dictFileP);
 
             CifFile* cifFileP = ParseCif(opts.inpFile);
+
+            const string& parsingDiags = cifFileP->GetParsingDiags();
+
+            if (!parsingDiags.empty())
+            {
+                cout << "Diags for file " << cifFileP->GetSrcFileName() <<
+                  "  = " << parsingDiags << endl;
+            }
 
             MmcifToXml mmcifToXml(*cifFileP, cifDataInfo, opts.schemaPrefix,
               opts.verbose);
