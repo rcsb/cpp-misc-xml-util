@@ -31,6 +31,12 @@ switch ($d)
     set dName = "mmcif_pdbx"
     exit 0
     breaksw
+
+    case mmcif_pdbx_v4_internal:
+    set prefix = "pdbx-v40"
+    set ns     = "PDBx"
+    set dName = "mmcif_pdbx"
+    breaksw
     
     case mmcif_std:
     set prefix = "mmcif_std"
