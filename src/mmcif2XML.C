@@ -72,6 +72,15 @@ int main(int argc, char* argv[])
 
             if (!parsingDiags.empty())
             {
+                string::size_type errLoc = parsingDiags.find("ERROR");
+                if (errLoc != string::npos)
+                {
+                    cerr << "Fatal parsing errors in \"" <<
+                      cifFileP->GetSrcFileName() << "\": " <<
+                      parsingDiags << endl;
+                    return (1);
+                }
+
                 cout << "Diags for file " << cifFileP->GetSrcFileName() <<
                   "  = " << parsingDiags << endl;
             }
@@ -97,6 +106,15 @@ int main(int argc, char* argv[])
 
             if (!parsingDiags.empty())
             {
+                string::size_type errLoc = parsingDiags.find("ERROR");
+                if (errLoc != string::npos)
+                {
+                    cerr << "Fatal parsing errors in \"" <<
+                      cifFileP->GetSrcFileName() << "\": " <<
+                      parsingDiags << endl;
+                    return (1);
+                }
+
                 cout << "Diags for file " << cifFileP->GetSrcFileName() <<
                   "  = " << parsingDiags << endl;
             }
