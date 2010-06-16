@@ -126,7 +126,7 @@ switch ($d)
 
     endsw
 #
-cd xml; ../bin/Dict2XMLSchema  -dictName $dName.dic -df ../odb/$d.odb \
+cd xml; /lcl/bin/Dict2XMLSchema -dictName $dName.dic -df ../odb/$d.odb \
   -ns $ns -prefix $prefix >& $d.log
   
 #
