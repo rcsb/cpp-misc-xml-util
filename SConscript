@@ -1,13 +1,15 @@
-#
+##
 # SConscript for mmcif-xml-util-v2.0
 # Updated: Dec 18, 2008 - Jdw
+#          Mar 30, 2011 - jdw clone environment
 #
 Import('env')
+env=env.Clone()
 #
-if (len(env.subst('$MYDEBUG')) > 0):
-	dict = env.Dictionary()
-	for k,v in dict.items():
-		print  k, " = ", str(v)
+#if (len(env.subst('$MYDEBUG')) > 0):
+#	dict = env.Dictionary()
+#	for k,v in dict.items():
+#		print  k, " = ", str(v)
 #
 libName = 'xmlutil'
 
