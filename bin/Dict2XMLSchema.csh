@@ -8,6 +8,14 @@ if ("$1" == "" ) then
    exit 1
 endif
 
+set dictToSchemaExe = "../bin/Dict2XMLSchema"
+set xmlDir = "xml_v40"
+
+if ("$2" == "" ) then
+   set dictToSchemaExe = "/lcl/bin/Dict2XMLSchema"
+   set xmlDir = "xml_v32"
+endif
+
 set d = "Creating XML schema from $1"
 
 set d = "$1"
@@ -21,12 +29,6 @@ switch ($d)
 
     case mmcif_pdbx_v33:
     set prefix = "pdbx-v33"
-    set ns     = "PDBx"
-    set dName = "mmcif_pdbx"
-    breaksw
-
-    case mmcif_pdbx_v40:
-    set prefix = "pdbx-v40"
     set ns     = "PDBx"
     set dName = "mmcif_pdbx"
     breaksw
@@ -46,12 +48,6 @@ switch ($d)
 
     case mmcif_pdbx_v4_internal:
     set prefix = "pdbx-v40"
-    set ns     = "PDBx"
-    set dName = "mmcif_pdbx"
-    breaksw
-
-    case mmcif_pdbx_v5_internal:
-    set prefix = "pdbx-v50"
     set ns     = "PDBx"
     set dName = "mmcif_pdbx"
     breaksw
@@ -138,7 +134,7 @@ switch ($d)
 
     endsw
 #
-cd xml; /lcl/bin/Dict2XMLSchema -dictName $dName.dic -df ../odb/$d.odb \
+cd $xmlDir; $dictToSchemaExe -dictName $dName.dic -df ../odb/$d.odb \
   -ns $ns -prefix $prefix >& $d.log
   
 #

@@ -4,7 +4,7 @@
 
 ../bin/mmcif2XML -dictName mmcif_pdbx.dic -df ../odb/mmcif_pdbx.odb -prefix pdbx-v32 -ns PDBx -funct mmcif2xmlall -f /ftp-weekly-release/pending/current/mmcif/3f9l.cif 2>&1 | tee 3f91.log
 
-cp ../xml/pdbx-v32-v1.0670.xsd pdbx-v32.xsd
+cp ../xml_v32/pdbx-v32-v1.0670.xsd pdbx-v32.xsd
 
 // sed this
 vi pdbx*.xsd
