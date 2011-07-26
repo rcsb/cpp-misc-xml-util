@@ -251,8 +251,8 @@ CmdLineOpts::CmdLineOpts(int argc, char* argv[])
     {
         funct = funct.substr((string("mmcif2xml")).size());
 
-        if ((funct != MmcifToXml::NoAtom) && (funct != MmcifToXml::ExtAtom) &&
-          (funct != MmcifToXml::All))
+        if ((!funct.empty()) && (funct != MmcifToXml::NoAtom) &&
+         (funct != MmcifToXml::ExtAtom) && (funct != MmcifToXml::All))
         {
             Usage();
             throw InvalidOptionsException();
