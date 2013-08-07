@@ -4,17 +4,17 @@
 # Date:  15-April-2004 J. Westbrook
 #
 if ("$1" == "" ) then 
-   echo "Usage:  $0 <Dictionary name (e.g. mmcif_pdbx)>"
+   echo "Usage:  $0 <Dict. name (e.g. mmcif_pdbx)> <Dict. version (e.g. v40)>"
+   exit 1
+endif
+
+if ("$2" == "" ) then
+   echo "Usage:  $0 <Dict. name (e.g. mmcif_pdbx)> <Dict. version (e.g. v40)>"
    exit 1
 endif
 
 set dictToSchemaExe = "../bin/Dict2XMLSchema"
 set xmlDir = "xml_v40"
-
-if ("$2" == "" ) then
-   set dictToSchemaExe = "/lcl/bin/Dict2XMLSchema"
-   set xmlDir = "xml_v32"
-endif
 
 set d = "Creating XML schema from $1"
 
