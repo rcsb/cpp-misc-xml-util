@@ -36,7 +36,7 @@ class MmcifToXml
       const std::string& funct);
 
     MmcifToXml(CifFile& cifFile, DataInfo& dataInfo,
-      const std::string& schemaPrefix, const bool verbose = false);
+      const std::string& schemaPrefix);
     ~MmcifToXml();
 
     void Convert(const std::string& xmlFileName, const std::string& ns,
@@ -53,8 +53,6 @@ class MmcifToXml
     DataInfo& _dataInfo;
 
     std::string _schemaPrefix;
-
-    bool _verbose;
 
     std::string _schemaFileNamePrefix;
 

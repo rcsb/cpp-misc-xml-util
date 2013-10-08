@@ -31,8 +31,7 @@ const string MmcifToXml::ExtAtom("extatom");
 
 
 MmcifToXml::MmcifToXml(CifFile& cifFile, DataInfo& dataInfo,
-  const string& schemaPrefix, const bool verbose) : _cifFile(cifFile),
-  _dataInfo(dataInfo), _verbose(verbose)
+  const string& schemaPrefix) : _cifFile(cifFile), _dataInfo(dataInfo)
 {
     NoAtomCategories.push_back("atom_site");
     NoAtomCategories.push_back("atom_site_anisotrop");

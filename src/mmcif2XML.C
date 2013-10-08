@@ -85,8 +85,7 @@ int main(int argc, char* argv[])
                   "  = " << parsingDiags << endl;
             }
 
-            MmcifToXml mmcifToXml(*cifFileP, dictDataInfo, opts.schemaPrefix,
-              opts.verbose);
+            MmcifToXml mmcifToXml(*cifFileP, dictDataInfo, opts.schemaPrefix);
 
             string xmlFile;
             MmcifToXml::MakeOutputFileName(xmlFile, opts.inpFile);
@@ -119,8 +118,7 @@ int main(int argc, char* argv[])
                   "  = " << parsingDiags << endl;
             }
 
-            MmcifToXml mmcifToXml(*cifFileP, cifDataInfo, opts.schemaPrefix,
-              opts.verbose);
+            MmcifToXml mmcifToXml(*cifFileP, cifDataInfo, opts.schemaPrefix);
 
             string xmlFile;
             MmcifToXml::MakeOutputFileName(xmlFile, opts.inpFile);
