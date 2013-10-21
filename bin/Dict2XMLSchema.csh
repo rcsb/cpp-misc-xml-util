@@ -121,6 +121,11 @@ switch ($d)
     set ns     = "mmcif_img"
     breaksw
 
+    case mmcif_sas:
+    set prefix = "mmcif_sas"
+    set ns     = "mmcif_sas"
+    breaksw
+
     case mmcif_mdb:
     set prefix = "mmcif_mdb"
     set ns     = "mmcif_mdb"
