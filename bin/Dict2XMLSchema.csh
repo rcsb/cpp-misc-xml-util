@@ -138,6 +138,11 @@ switch ($d)
     set ns     = "mmcif_sas"
     breaksw
 
+    case mmcif_nef:
+    set prefix = "mmcif_nef"
+    set ns     = "mmcif_nef"
+    breaksw
+    
     case mmcif_mdb:
     set prefix = "mmcif_mdb"
     set ns     = "mmcif_mdb"
