@@ -72,19 +72,19 @@ switch ($d)
     breaksw
 
     case mmcif_pdbx_v5_internal:
-    set prefix = "pdbx-v50"
+    set prefix = "pdbx-v50-internal"
     set ns     = "PDBx"
     set dName = "mmcif_pdbx"
     breaksw
 
     case mmcif_pdbx_v5_next:
-    set prefix = "pdbx-v50"
+    set prefix = "pdbx-v50-next"
     set ns     = "PDBx"
     set dName = "mmcif_pdbx"
     breaksw
 
     case mmcif_pdbx_v5_rc:
-    set prefix = "pdbx-v50-rc"
+    set prefix = "pdbx-v50"
     set ns     = "PDBx"
     set dName = "mmcif_pdbx"
     breaksw
