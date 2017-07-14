@@ -150,6 +150,11 @@ switch ($d)
     set ns     = "mmcif_ihm"
     breaksw
 
+    case ihm-extension:
+    set prefix = "ihm-extension"
+    set ns     = "ihm-extension"
+    breaksw
+
     case mmcif_sas:
     set prefix = "mmcif_sas"
     set ns     = "mmcif_sas"
