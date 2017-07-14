@@ -148,11 +148,7 @@ switch ($d)
     case mmcif_ihm:
     set prefix = "mmcif_ihm"
     set ns     = "mmcif_ihm"
-    breaksw
-
-    case ihm-extension:
-    set prefix = "ihm-extension"
-    set ns     = "ihm-extension"
+    set dName = "ihm-extension"
     breaksw
 
     case mmcif_sas:
