@@ -14,7 +14,7 @@ if ("$2" == "" ) then
 endif
 
 set dictToSchemaExe = "../bin/Dict2XMLSchema"
-set xmlDir = "xml_v40"
+set xmlDir = "xml_v50"
 
 set d = "Creating XML schema from $1"
 
