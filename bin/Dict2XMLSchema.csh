@@ -186,6 +186,19 @@ switch ($d)
     set ns     = "mmcif_sym"
     breaksw
 
+    case mmcif_ndb_ntc:
+    set prefix = "mmcif_ndb_ntc"
+    set ns     = "mmcif_ndb_ntc"
+    set dName = "ndb-ntc-extension"
+    breaksw
+
+    case mmcif_pdbx_vrpt:
+    set prefix = "mmcif_pdbx_vrpt"
+    set ns     = "mmcif_pdbx_vrpt"
+    set dName = "mmcif_pdbx_vrpt"
+    breaksw
+
+
     default:
     set prefix = "mmcif"
     set ns     = "mmCIF"
